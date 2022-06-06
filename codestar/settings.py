@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
-import dj_database_url
+from pathlib import Path
 from django.contrib.messages import constants as messages
+import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
@@ -69,7 +69,8 @@ MESSAGE_TAGS = {
         messages.ERROR: 'alert-danger',
     }
 
-CRISPY_TEMPLATE_PACK = 'bootsrap4'
+# CRISPY_TEMPLATE_PACK = 'bootsrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = ('bootstrap', 'uni_form', 'bootstrap4', 'foundation-5') 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
